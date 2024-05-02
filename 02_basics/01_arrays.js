@@ -1,4 +1,4 @@
-//array
+//array : arrays in js have dynamic length as of in java have arraylist to see all methods go to mdn web docs or type Array in console of your browser
 const myArr = [0,1,2,3,4,5] // Type ------> 1
 const myHeroes = ["Shaktiman" , "naggarjuna"]
 const myArr2 = new Array() //Type ----> 2
