@@ -38,8 +38,24 @@ const users = [
 ]
 // console.log(users[1].email)
 // console.log(users[2].email)
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
-console.log(tinderUser.hasOwnProperty('isLogdedIn'));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+// console.log(tinderUser.hasOwnProperty('isLogdedIn'));
+
+//+++++++++++++++++++++++ Object Destructuring +++++++++++++++++++++++\\
+
+const course = {
+    courseName : "Js in Hindi",
+    price : "999" ,
+    courseInstructor : "Hitesh Sir"
+}
+const {courseInstructor : Instructor} = course
+console.log(Instructor);
+
+// { example of an data from an api
+//     "name" : "Hitesh Sir",
+//     "courseName" : "Json In Hindi",
+//     "price" : "free"
+// }
