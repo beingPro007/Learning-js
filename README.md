@@ -1,4 +1,3 @@
-Certainly! Here's a draft for your animated README:
 
 ---
 
