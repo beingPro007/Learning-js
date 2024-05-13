@@ -2,8 +2,8 @@
 ##project link 
 [Click Here](https://stackblitz.com/edit/dom-project-chaiaurcode-6esvnj?file=index.html)
 
-#Solution Code 
-##Project 1
+# Solution Code 
+## Project 1
 ```JAVASCRIPT 
 console.log("Gautam")
 const buttons = document.querySelectorAll('.button');
