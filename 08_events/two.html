@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayGautam = function (){
+        console.log("Gautam");
+    }
+    const changeText  = function(){
+        document.querySelector('h1').innerHTML = "Best JS series"
+    }
+    const changeMe = setTimeout(changeText , 2000);// ---> Text get Changed to Best JS series after 2 seconds of time...
+    
+
+    // text will not change if stop button is tapped before 2 seconds
+    document.querySelector("#stop").addEventListener('click',function(e){
+        clearTimeout(changeMe);
+        console.log("stopped");
+    })
+</script>
+</html>
