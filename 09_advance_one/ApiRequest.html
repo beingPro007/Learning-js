@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 200px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+
+        .card-content h2 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .card-content p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        #btn {
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 2px;
+            padding: auto;
+        }
+
+        #text {
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 2px;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121; color: aqua;">
+    <input type="text" name="" id="text">
+    <button id="btn">Get Info</button>
+    <div class="card">
+        <img id="image" src="" alt="Profile Image">
+        <div class="card-content">
+            <h2 id="name">John Doe</h2>
+            <p id="followers"></p>
+        </div>
+    </div>
+</body>
+<script>
+    const xhr = new XMLHttpRequest();
+    document.querySelector('#btn').addEventListener('click', (e) => {
+        const searchBox = document.getElementById('text');
+        const value = searchBox.value;
+        let reqUrl = `https://api.github.com/users/${value}`;
+        xhr.open('GET', reqUrl);
+        // this will show whenver a ready state change until it fully loaded
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText);
+                const img = document.querySelector('#image');
+                img.setAttribute('src', data.avatar_url);
+                const name = document.getElementById('name');
+                name.innerHTML = data.login;
+                const followers = document.getElementById('followers');
+                followers.innerHTML = `<p>Followers : ${data.followers}</p>`
+            }
+        }
+        xhr.send();
+    })
+</script>
+
+</html>
+        
