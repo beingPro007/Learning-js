@@ -22,6 +22,8 @@ Right now, I'm delving into the fundamentals of JavaScript, including:
 - Functions and Scope
 - Arrays and Objects
 - DOM Manipulation
+- Events
+- Promises(Current)
 
 #### 🚧 Work in Progress:
 
